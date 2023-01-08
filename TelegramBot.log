@@ -1,0 +1,15 @@
+[01/08/2023 07:00:29 PM:plugins.index:75:ERROR] Telegram says: [406 CHANNEL_PRIVATE] - The channel/supergroup is not accessible (caused by "channels.GetFullChannel")
+Traceback (most recent call last):
+  File "/root/20/plugins/index.py", line 69, in send_for_index
+    await bot.get_chat(chat_id)
+  File "/usr/local/lib/python3.10/dist-packages/pyrogram/methods/chats/get_chat.py", line 81, in get_chat
+    r = await self.invoke(raw.functions.channels.GetFullChannel(channel=peer))
+  File "/usr/local/lib/python3.10/dist-packages/pyrogram/methods/advanced/invoke.py", line 79, in invoke
+    r = await self.session.invoke(
+  File "/usr/local/lib/python3.10/dist-packages/pyrogram/session/session.py", line 361, in invoke
+    return await self.send(query, timeout=timeout)
+  File "/usr/local/lib/python3.10/dist-packages/pyrogram/session/session.py", line 331, in send
+    RPCError.raise_it(result, type(data))
+  File "/usr/local/lib/python3.10/dist-packages/pyrogram/errors/rpc_error.py", line 91, in raise_it
+    raise getattr(
+pyrogram.errors.exceptions.not_acceptable_406.ChannelPrivate: Telegram says: [406 CHANNEL_PRIVATE] - The channel/supergroup is not accessible (caused by "channels.GetFullChannel")
